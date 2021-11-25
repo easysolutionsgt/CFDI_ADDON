@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="EDX_FEL" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="EDX_FEL" ExtVersion="1.1.36" Contdata="" Partner="Edx Solutions" DBType="Both" ClientType="A">
+  <Validity>
+    <SBOCompatibility>
+      <Version From="" To="" />
+    </SBOCompatibility>
+  </Validity>
+  <Configuration>
+    <Repository>
+      <Properties />
+    </Repository>
+    <Deployment>
+      <Properties />
+    </Deployment>
+    <Assignment>
+      <Properties />
+    </Assignment>
+  </Configuration>
+  <Addons>
+    <Addon Name="" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
+      <x86 AddonExe="C:\FUENTES\FEL EDX\32 Bits\Factura_Electronica\bin\Factura_Electronica.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName=".xml">
+              <Actions />
+            </File>
+            <File FileName="addMenus.xml">
+              <Actions />
+            </File>
+            <File FileName="app.config">
+              <Actions />
+            </File>
+            <File FileName="B1WizardBase.dll">
+              <Actions />
+            </File>
+            <File FileName="Factura_Electronica.exe">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SBOLICENSELib.dll">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="SAPSDKProg.dll">
+              <Actions />
+            </File>
+            <File FileName="Images\fac.png">
+              <Actions />
+            </File>
+            <File FileName="Menus\Menu__mnSucs.vb">
+              <Actions />
+            </File>
+            <File FileName="XML\frmEnvio.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmFELCNFG.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmSerieFEL.xml">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName=".xml">
+              <Actions />
+            </File>
+            <File FileName="addMenus.xml">
+              <Actions />
+            </File>
+            <File FileName="app.config">
+              <Actions />
+            </File>
+            <File FileName="B1WizardBase.dll">
+              <Actions />
+            </File>
+            <File FileName="Factura_Electronica.exe">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SBOLICENSELib.dll">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="SAPSDKProg.dll">
+              <Actions />
+            </File>
+            <File FileName="Images\fac.png">
+              <Actions />
+            </File>
+            <File FileName="Menus\Menu__mnSucs.vb">
+              <Actions />
+            </File>
+            <File FileName="XML\frmEnvio.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmFELCNFG.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmSerieFEL.xml">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x86>
+      <x64 AddonExe="C:\FUENTES\FEL EDX\64 Bits\Factura_Electronica\bin\Factura_Electronica.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName=".xml">
+              <Actions />
+            </File>
+            <File FileName="addMenus.xml">
+              <Actions />
+            </File>
+            <File FileName="app.config">
+              <Actions />
+            </File>
+            <File FileName="B1WizardBase.dll">
+              <Actions />
+            </File>
+            <File FileName="Factura_Electronica.exe">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SBOLICENSELib.dll">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="SAPSDKProg.dll">
+              <Actions />
+            </File>
+            <File FileName="Images\fac.png">
+              <Actions />
+            </File>
+            <File FileName="Menus\Menu__mnSucs.vb">
+              <Actions />
+            </File>
+            <File FileName="XML\frmEnvio.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmFELCNFG.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmSerieFEL.xml">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName=".xml">
+              <Actions />
+            </File>
+            <File FileName="addMenus.xml">
+              <Actions />
+            </File>
+            <File FileName="app.config">
+              <Actions />
+            </File>
+            <File FileName="B1WizardBase.dll">
+              <Actions />
+            </File>
+            <File FileName="Factura_Electronica.exe">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SBOLICENSELib.dll">
+              <Actions />
+            </File>
+            <File FileName="Newtonsoft.Json.dll">
+              <Actions />
+            </File>
+            <File FileName="SAPSDKProg.dll">
+              <Actions />
+            </File>
+            <File FileName="Images\fac.png">
+              <Actions />
+            </File>
+            <File FileName="Menus\Menu__mnSucs.vb">
+              <Actions />
+            </File>
+            <File FileName="XML\frmEnvio.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmFELCNFG.xml">
+              <Actions />
+            </File>
+            <File FileName="XML\frmSerieFEL.xml">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x64>
+    </Addon>
+  </Addons>
+  <XApps>
+    <XApp Name="" Path="" FileName="" />
+  </XApps>
+  <UDQs>
+    <UDQ udqname="">
+      <Hana FileName="" />
+    </UDQ>
+  </UDQs>
+</AddOnRegData>

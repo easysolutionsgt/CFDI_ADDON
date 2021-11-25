@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ConvertDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentContent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertSignDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentContent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertSignDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertSignDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertSignDocumentWithConnector">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Connector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertSignDocumentWithConnectorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertSignDocumentWithConnectorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClientCertificateImport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordArea" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Certificate" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCertificate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClientCertificateImportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClientCertificateImportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertCloudDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClientInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="UseConnector" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Connector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ClientInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RFC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateTimeError" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Service" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MachineName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OSVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SysName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MacAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConvertCloudDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertCloudDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterCloudEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClientInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegisterCloudEventResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegisterCloudEventResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecoverCloudDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="obj" type="tns:ClientInfo" />
+            <s:element minOccurs="1" maxOccurs="1" name="UseConnector" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Connector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecoverCloudDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RecoverCloudDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertDocumentWithConnector">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Connector" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvertDocumentWithConnectorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvertDocumentWithConnectorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignDTEDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentContent" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SignDTEDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignDTEDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDocumentWithCustomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Area" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Connector" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ConvertDocument" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="SignDocument" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="PrintDocument" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDocumentWithCustomResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateDocumentWithCustomResponseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConvertDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertDocument" />
+  </wsdl:message>
+  <wsdl:message name="ConvertDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertSignDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertSignDocument" />
+  </wsdl:message>
+  <wsdl:message name="ConvertSignDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertSignDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertSignDocumentWithConnectorSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertSignDocumentWithConnector" />
+  </wsdl:message>
+  <wsdl:message name="ConvertSignDocumentWithConnectorSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertSignDocumentWithConnectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClientCertificateImportSoapIn">
+    <wsdl:part name="parameters" element="tns:ClientCertificateImport" />
+  </wsdl:message>
+  <wsdl:message name="ClientCertificateImportSoapOut">
+    <wsdl:part name="parameters" element="tns:ClientCertificateImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertCloudDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertCloudDocument" />
+  </wsdl:message>
+  <wsdl:message name="ConvertCloudDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertCloudDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterCloudEventSoapIn">
+    <wsdl:part name="parameters" element="tns:RegisterCloudEvent" />
+  </wsdl:message>
+  <wsdl:message name="RegisterCloudEventSoapOut">
+    <wsdl:part name="parameters" element="tns:RegisterCloudEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecoverCloudDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:RecoverCloudDocument" />
+  </wsdl:message>
+  <wsdl:message name="RecoverCloudDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:RecoverCloudDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvertDocumentWithConnectorSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvertDocumentWithConnector" />
+  </wsdl:message>
+  <wsdl:message name="ConvertDocumentWithConnectorSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvertDocumentWithConnectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="SignDTEDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:SignDTEDocument" />
+  </wsdl:message>
+  <wsdl:message name="SignDTEDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:SignDTEDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateDocumentWithCustomResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateDocumentWithCustomResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateDocumentWithCustomResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateDocumentWithCustomResponseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CoreSoap">
+    <wsdl:operation name="ConvertDocument">
+      <wsdl:input message="tns:ConvertDocumentSoapIn" />
+      <wsdl:output message="tns:ConvertDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertSignDocument">
+      <wsdl:input message="tns:ConvertSignDocumentSoapIn" />
+      <wsdl:output message="tns:ConvertSignDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertSignDocumentWithConnector">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para convertir y firmar documento apartir de una transformacion por medio de un connector</wsdl:documentation>
+      <wsdl:input message="tns:ConvertSignDocumentWithConnectorSoapIn" />
+      <wsdl:output message="tns:ConvertSignDocumentWithConnectorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClientCertificateImport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para cargar el certificado</wsdl:documentation>
+      <wsdl:input message="tns:ClientCertificateImportSoapIn" />
+      <wsdl:output message="tns:ClientCertificateImportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertCloudDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para convertir, firmar el documento y generar el PDF</wsdl:documentation>
+      <wsdl:input message="tns:ConvertCloudDocumentSoapIn" />
+      <wsdl:output message="tns:ConvertCloudDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCloudEvent">
+      <wsdl:input message="tns:RegisterCloudEventSoapIn" />
+      <wsdl:output message="tns:RegisterCloudEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para validar el usuario del area</wsdl:documentation>
+      <wsdl:input message="tns:ValidateUserSoapIn" />
+      <wsdl:output message="tns:ValidateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecoverCloudDocument">
+      <wsdl:input message="tns:RecoverCloudDocumentSoapIn" />
+      <wsdl:output message="tns:RecoverCloudDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertDocumentWithConnector">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para convertir documento apartir de una transformacion por medio de un connecor</wsdl:documentation>
+      <wsdl:input message="tns:ConvertDocumentWithConnectorSoapIn" />
+      <wsdl:output message="tns:ConvertDocumentWithConnectorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SignDTEDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para firmar documento apartir de xml convertido por medio de un connecor</wsdl:documentation>
+      <wsdl:input message="tns:SignDTEDocumentSoapIn" />
+      <wsdl:output message="tns:SignDTEDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocumentWithCustomResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Método para convertir, firmar y crear pdf</wsdl:documentation>
+      <wsdl:input message="tns:CreateDocumentWithCustomResponseSoapIn" />
+      <wsdl:output message="tns:CreateDocumentWithCustomResponseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CoreSoap" type="tns:CoreSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConvertDocument">
+      <soap:operation soapAction="http://tempuri.org/ConvertDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertSignDocument">
+      <soap:operation soapAction="http://tempuri.org/ConvertSignDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertSignDocumentWithConnector">
+      <soap:operation soapAction="http://tempuri.org/ConvertSignDocumentWithConnector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientCertificateImport">
+      <soap:operation soapAction="http://tempuri.org/ClientCertificateImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertCloudDocument">
+      <soap:operation soapAction="http://tempuri.org/ConvertCloudDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCloudEvent">
+      <soap:operation soapAction="http://tempuri.org/RegisterCloudEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://tempuri.org/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverCloudDocument">
+      <soap:operation soapAction="http://tempuri.org/RecoverCloudDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertDocumentWithConnector">
+      <soap:operation soapAction="http://tempuri.org/ConvertDocumentWithConnector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignDTEDocument">
+      <soap:operation soapAction="http://tempuri.org/SignDTEDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocumentWithCustomResponse">
+      <soap:operation soapAction="http://tempuri.org/CreateDocumentWithCustomResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CoreSoap12" type="tns:CoreSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConvertDocument">
+      <soap12:operation soapAction="http://tempuri.org/ConvertDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertSignDocument">
+      <soap12:operation soapAction="http://tempuri.org/ConvertSignDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertSignDocumentWithConnector">
+      <soap12:operation soapAction="http://tempuri.org/ConvertSignDocumentWithConnector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientCertificateImport">
+      <soap12:operation soapAction="http://tempuri.org/ClientCertificateImport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertCloudDocument">
+      <soap12:operation soapAction="http://tempuri.org/ConvertCloudDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterCloudEvent">
+      <soap12:operation soapAction="http://tempuri.org/RegisterCloudEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUser">
+      <soap12:operation soapAction="http://tempuri.org/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverCloudDocument">
+      <soap12:operation soapAction="http://tempuri.org/RecoverCloudDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertDocumentWithConnector">
+      <soap12:operation soapAction="http://tempuri.org/ConvertDocumentWithConnector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SignDTEDocument">
+      <soap12:operation soapAction="http://tempuri.org/SignDTEDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocumentWithCustomResponse">
+      <soap12:operation soapAction="http://tempuri.org/CreateDocumentWithCustomResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Core">
+    <wsdl:port name="CoreSoap" binding="tns:CoreSoap">
+      <soap:address location="http://3.229.146.105/FEL.Conector/core.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CoreSoap12" binding="tns:CoreSoap12">
+      <soap12:address location="http://3.229.146.105/FEL.Conector/core.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

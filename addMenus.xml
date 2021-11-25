@@ -1,0 +1,15 @@
+<Application>
+  <Menus>
+    <action type="add">
+      <Menu Checked="0" Enabled="1" FatherUID="43520" Image="" Position="15" String="Factura Electronica" Type="2" UniqueID="mnElecFact">
+        <Menus>
+          <action type="add">
+            <Menu Checked="0" Enabled="1" FatherUID="mnElecFact" Image="" Position="0" String="Datos de Certificación" Type="1" UniqueID="mnConfig" />
+            <Menu Checked="0" Enabled="1" FatherUID="mnElecFact" Image="" Position="1" String="Series Electronicas" Type="1" UniqueID="mnSeries" />
+            <Menu Checked="0" Enabled="1" FatherUID="mnElecFact" Image="" Position="2" String="Documentos Pendientes" Type="1" UniqueID="mnDocs" />
+          </action>
+        </Menus>
+      </Menu>
+    </action>
+  </Menus>
+</Application>
